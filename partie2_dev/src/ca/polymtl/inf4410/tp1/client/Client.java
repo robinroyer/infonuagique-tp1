@@ -144,6 +144,8 @@ public class Client {
 		try {
 			System.out.println("Tentative de lock de : " + filename);
 			System.out.println("ClientId : " + clientId);
+			// TODO: debug le lock server qui renvoit une erreur
+			// =>
 			distantServerStub.lock(filename, clientId, checksum);
 			System.out.println("Fichier " + filename + "verouille.");
 		} catch (Exception e) {
